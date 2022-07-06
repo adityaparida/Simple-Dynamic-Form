@@ -9,6 +9,7 @@
         <div formArrayName="userArray"
           *ngFor="let user of userForm.get('userArray').controls; let id = index; let isLast = last">
           <mat-card [formGroupName]="id" class="row mat-elevation-z8 m-4">
+            <p>{{id}}</p>
             <mat-form-field class="col-auto" appearance="outline">
               <mat-label>Name</mat-label>
               <input matInput formControlName="name" [(ngModel)]="user.get('name').value" />
